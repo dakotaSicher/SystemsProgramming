@@ -7,7 +7,8 @@ int main(int argc, char* argv[]){
         fd = fopen(argv[1],"r");
     }
     else{
-        fd = fopen("tmp.txt","w+");
+        fd =tmpfile();
+        printf("Enter ctrl+d to finish input:\n"); 
         char c;
         while((c=getchar()) != EOF){
             fputc(c,fd);
